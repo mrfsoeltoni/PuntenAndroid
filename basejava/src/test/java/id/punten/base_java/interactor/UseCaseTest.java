@@ -1,4 +1,4 @@
-package id.punten.base_java;
+package id.punten.base_java.interactor;
 
 import org.junit.Before;
 import org.junit.Rule;
@@ -70,7 +70,7 @@ public class UseCaseTest {
         }
 
         @Override
-        Observable<Object> buildUseCaseObservable(Params params) {
+        public Observable<Object> buildUseCaseObservable(Params params) {
             return Observable.empty();
         }
 

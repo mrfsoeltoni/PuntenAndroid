@@ -1,4 +1,4 @@
-package id.punten.base_java;
+package id.punten.base_java.interactor;
 
 import io.reactivex.observers.DisposableObserver;
 

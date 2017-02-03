@@ -1,4 +1,4 @@
-package id.punten.base_java;
+package id.punten.base_java.interactor;
 
 import com.fernandocejas.arrow.checks.Preconditions;
 
@@ -16,7 +16,7 @@ public abstract class UseCase<T, Params> {
     private final PostExecutionThread postExecutionThread;
     private final CompositeDisposable disposables;
 
-    UseCase(ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
+    public UseCase(ThreadExecutor threadExecutor, PostExecutionThread postExecutionThread) {
         this.threadExecutor = threadExecutor;
         this.postExecutionThread = postExecutionThread;
         this.disposables = new CompositeDisposable();
@@ -25,7 +25,7 @@ public abstract class UseCase<T, Params> {
     /**
      * Builds an {@link Observable} which will be used when executing the current {@link UseCase}.
      */
-    abstract Observable<T> buildUseCaseObservable(Params params);
+    public abstract Observable<T> buildUseCaseObservable(Params params);
 
     /**
      * Executes the current use case.
